@@ -18,6 +18,10 @@ oc new-project ${GUID}-tasks-dev  --display-name="${GUID} AdvDev Homework Tasks 
 oc new-project ${GUID}-tasks-prod --display-name="${GUID} AdvDev Homework Tasks Production"
 
 if [ "$FROM_JENKINS" = "true" ]; then
+  oc policy add-role-to-user edit system:serviceaccount:gpte-jenkins:jenkins -n ${GUID}-jenkins
+  oc policy add-role-to-user edit system:serviceaccount:gpte-jenkins:jenkins -n ${GUID}-tasks-dev
+  oc policy add-role-to-user edit system:serviceaccount:gpte-jenkins:jenkins -n ${GUID}-tasks-prod
+  
   oc policy add-role-to-user admin ${USER} -n ${GUID}-jenkins
   oc policy add-role-to-user admin ${USER} -n ${GUID}-tasks-dev
   oc policy add-role-to-user admin ${USER} -n ${GUID}-tasks-prod
