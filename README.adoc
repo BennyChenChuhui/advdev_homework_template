@@ -6,4 +6,4 @@
 - USER: chuchen-redhat.com
 - CONSOLE: https://master.na311.openshift.opentlc.com
 
-![alt text](https://github.com/BennyChenChuhui/advdev_homework_template/blob/master/homework-result-3348.jpg?raw=true)
+<img src="https://github.com/BennyChenChuhui/advdev_homework_template/blob/master/homework-result-3348.jpg"></img>
