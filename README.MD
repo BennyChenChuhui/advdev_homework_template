@@ -1,4 +1,4 @@
-= OpenShift Advanced Development Homework
+# OpenShift Advanced Development Homework
 
 - GUID: 6b1d
 - REPO: https://github.com/BennyChenChuhui/advdev_homework_template.git
