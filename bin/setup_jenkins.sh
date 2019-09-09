@@ -16,6 +16,12 @@ echo "Setting up Jenkins in project ${GUID}-jenkins from Git Repo ${REPO} for Cl
 oc new-app jenkins-persistent --param ENABLE_OAUTH=true --param MEMORY_LIMIT=2Gi --param VOLUME_CAPACITY=4Gi --param DISABLE_ADMINISTRATIVE_MONITORS=true -n ${GUID}-jenkins
 
 # Create custom agent container image with skopeo
+
+# It will fail if didn't add the following roles in bin/setup_projects.sh
+#  oc policy add-role-to-user edit system:serviceaccount:gpte-jenkins:jenkins -n ${GUID}-jenkins
+#  oc policy add-role-to-user edit system:serviceaccount:gpte-jenkins:jenkins -n ${GUID}-tasks-dev
+#  oc policy add-role-to-user edit system:serviceaccount:gpte-jenkins:jenkins -n ${GUID}-tasks-prod
+
 oc new-build  -D $'FROM docker.io/openshift/jenkins-agent-maven-35-centos7:v3.11\n
       USER root\nRUN yum -y install skopeo && yum clean all\n
       USER 1001' --name=jenkins-agent-appdev -n ${GUID}-jenkins
