@@ -6,4 +6,6 @@
 - USER: chuchen-redhat.com
 - CONSOLE: https://master.na311.openshift.opentlc.com
 
-![alt text](https://github.com/jaysonzhao/advdev_homework_template/blob/master/ocpadvdevHomework.png?raw=true)
+#
+
+![alt text](homework-result-3348.png)
