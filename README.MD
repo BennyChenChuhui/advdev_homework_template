@@ -7,5 +7,7 @@
 - CONSOLE: https://master.na311.openshift.opentlc.com
 
 # Running Result is as follows.
+- HOST: https://jenkins-gpte-jenkins.apps.na311.openshift.opentlc.com
+- ID: 3348
 
 ![alt text](homework-result-3348.png)
